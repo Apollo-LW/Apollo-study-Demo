@@ -1,0 +1,27 @@
+topic:
+  name: user-events
+  partition-num: 3
+  replication-factor: 3
+
+spring:
+  application:
+    name: kafka-demo
+  kafka:
+    properties:
+      bootstrap.server: http://localhost:9092
+      schema.registry.url: http://localhost:8081
+    consumer:
+      group-id: page-group
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      properties:
+        specific.avro.reader: true
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      template:
+        default-topic:
+
+server:
+  port: 8016

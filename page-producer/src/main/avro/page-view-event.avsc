@@ -1,0 +1,17 @@
+{
+  "namespace": "com.example.demo.model",
+  "name": "PageViewEvent",
+  "type": "record",
+  "fields": [
+    {
+      "name": "pageName",
+      "type": "string"
+    } , {
+      "name": "personName",
+      "type": "string"
+    } , {
+      "name": "duration",
+      "type": "long"
+    }
+  ]
+}
