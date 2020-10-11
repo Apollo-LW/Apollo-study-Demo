@@ -1,0 +1,12 @@
+package com.apollo.demo.spring.model;
+
+import lombok.Data;
+
+@Data
+public class User {
+
+    private String name;
+    private int age;
+    private String username;
+
+}
