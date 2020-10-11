@@ -1,0 +1,17 @@
+{
+  "namespace": "com.apollo.demo.simplekafka.new-model",
+  "type": "record",
+  "name": "User",
+  "fields": [
+    {
+      "name": "userId",
+      "type": "string"
+    } , {
+      "name": "username",
+      "type": "string"
+    } , {
+      "name": "age",
+      "type": "int"
+    }
+  ]
+}
